@@ -1,0 +1,11 @@
+version: '3'
+services:
+  mysql:
+     container_name: mysql
+     build:
+       context: .
+       dockerfile: Dockerfile
+     volumes:
+        - /mysql/data:/var/lib/mysql 
+     ports:
+        - 3306
